@@ -32,6 +32,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Gi-Jz-iA1" id="U2y-0c-eRR">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fLd-0o-qSt" kind="show" identifier="displayDetail" id="awn-rE-IDu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="default">
@@ -89,9 +92,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Dream Catcher" id="i8k-7N-RHX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="8aO-FA-Eju">
+                        <barButtonItem key="leftBarButtonItem" title="edit" id="8aO-FA-Eju">
                             <connections>
-                                <action selector="onEditButtonTapped:" destination="BYZ-38-t0r" id="NtI-j5-vb3"/>
+                                <action selector="onEditButtonTapped:" destination="BYZ-38-t0r" id="LJy-5b-kFC"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ig3-z5-YJR">
@@ -102,12 +105,81 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="tableView" destination="8bC-Xf-vdC" id="6Ip-C7-a9i"/>
+                        <outlet property="tableView" destination="xWI-jc-14v" id="GE2-vj-Rf8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1297.5" y="315"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="mWA-CK-rX8">
+            <objects>
+                <viewController id="fLd-0o-qSt" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1sR-r9-uXe"/>
+                        <viewControllerLayoutGuide type="bottom" id="aP6-iM-9I0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ruW-8b-T5G">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-92-lMF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4HV-92-lMF" firstAttribute="top" secondItem="1sR-r9-uXe" secondAttribute="bottom" id="2Kz-DI-tEw"/>
+                            <constraint firstItem="4HV-92-lMF" firstAttribute="leading" secondItem="ruW-8b-T5G" secondAttribute="leadingMargin" constant="-16" id="AYe-cn-QNd"/>
+                            <constraint firstItem="4HV-92-lMF" firstAttribute="top" secondItem="1sR-r9-uXe" secondAttribute="bottom" id="EWe-f9-PJv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4HV-92-lMF" secondAttribute="trailing" constant="-21" id="TV3-z2-fVd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4HV-92-lMF" secondAttribute="trailing" constant="-21" id="a2v-tr-cm6"/>
+                            <constraint firstItem="4HV-92-lMF" firstAttribute="leading" secondItem="ruW-8b-T5G" secondAttribute="leading" id="cHo-hN-hG4"/>
+                            <constraint firstItem="4HV-92-lMF" firstAttribute="bottom" secondItem="aP6-iM-9I0" secondAttribute="top" id="f85-0L-cQn"/>
+                            <constraint firstItem="aP6-iM-9I0" firstAttribute="top" secondItem="4HV-92-lMF" secondAttribute="bottom" id="qJl-32-B2k"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4HV-92-lMF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2Kz-DI-tEw"/>
+                                <exclude reference="AYe-cn-QNd"/>
+                                <exclude reference="EWe-f9-PJv"/>
+                                <exclude reference="TV3-z2-fVd"/>
+                                <exclude reference="a2v-tr-cm6"/>
+                                <exclude reference="cHo-hN-hG4"/>
+                                <exclude reference="f85-0L-cQn"/>
+                                <exclude reference="qJl-32-B2k"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="4HV-92-lMF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2Kz-DI-tEw"/>
+                                <include reference="AYe-cn-QNd"/>
+                                <include reference="EWe-f9-PJv"/>
+                                <include reference="TV3-z2-fVd"/>
+                                <include reference="a2v-tr-cm6"/>
+                                <include reference="cHo-hN-hG4"/>
+                                <include reference="f85-0L-cQn"/>
+                                <include reference="qJl-32-B2k"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="text" destination="4HV-92-lMF" id="A9T-9i-vYA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6p-PQ-f7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2004" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8wt-JN-yDd">

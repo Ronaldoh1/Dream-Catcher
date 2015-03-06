@@ -15,6 +15,7 @@
 		F2A5FBFA1AA9808D00E1ECA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A5FBF81AA9808D00E1ECA5 /* LaunchScreen.xib */; };
 		F2A5FC061AA9808D00E1ECA5 /* Dream_CatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A5FC051AA9808D00E1ECA5 /* Dream_CatcherTests.m */; };
 		F2A5FC111AA981FD00E1ECA5 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A5FC101AA981FD00E1ECA5 /* ListViewController.m */; };
+		F2A5FC141AA991FB00E1ECA5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A5FC131AA991FB00E1ECA5 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		F2A5FC051AA9808D00E1ECA5 /* Dream_CatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dream_CatcherTests.m; sourceTree = "<group>"; };
 		F2A5FC0F1AA981FD00E1ECA5 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../ListViewController.h; sourceTree = "<group>"; };
 		F2A5FC101AA981FD00E1ECA5 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
+		F2A5FC121AA991FB00E1ECA5 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F2A5FC131AA991FB00E1ECA5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				F2A5FBEB1AA9808D00E1ECA5 /* AppDelegate.m */,
 				F2A5FC0F1AA981FD00E1ECA5 /* ListViewController.h */,
 				F2A5FC101AA981FD00E1ECA5 /* ListViewController.m */,
+				F2A5FC121AA991FB00E1ECA5 /* DetailViewController.h */,
+				F2A5FC131AA991FB00E1ECA5 /* DetailViewController.m */,
 				F2A5FBF31AA9808D00E1ECA5 /* Main.storyboard */,
 				F2A5FBF61AA9808D00E1ECA5 /* Images.xcassets */,
 				F2A5FBF81AA9808D00E1ECA5 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A5FC141AA991FB00E1ECA5 /* DetailViewController.m in Sources */,
 				F2A5FBEF1AA9808D00E1ECA5 /* Dream_Catcher.xcdatamodeld in Sources */,
 				F2A5FBEC1AA9808D00E1ECA5 /* AppDelegate.m in Sources */,
 				F2A5FC111AA981FD00E1ECA5 /* ListViewController.m in Sources */,
